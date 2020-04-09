@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Aula1"
+    }
+  },
+  "defaultProject": "Aula1",
+  "cli": {
+    "analytics": false
+  }
 }
