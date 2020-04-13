@@ -1,20 +1,22 @@
-<p>eventos works!</p>
 <div>
     <h1>Parabéns!</h1>
     <h4>Seu componente está sendo exibido em tela</h4>
     <hr>
     <h5>Como aparece o seu evento abaixo?</h5>
+    <div *ngFor="let mel of evento">
 
-    <div style="margin-top:30px">
-        Evento: {{ evento.name }}
-    </div>
-    <div>
-        Data: {{ evento.date }}
-    </div>
-    <div>
-        Hora: {{ evento.time }}
-    </div>
-    <div>
-        Endereço: {{ evento.location.address }} , {{ evento.location.city }} , {{ evento.location.country }}
+        <div style="margin-top:30px">
+            <span *ngIf="mel.onlineUrl">Evento Online {{mel.onlineUrl}}</span><br/> Evento:{{ mel.name }}
+        </div>
+
+        <div>
+            Data:{{ mel.date }}
+        </div>
+        <div>
+            Hora:{{ mel.time }}
+        </div>
+        <div>
+            Endereço:{{ mel.location?.address }}, {{ mel.location?.city }}, {{mel.location?.country}}
+        </div>
     </div>
 </div>
